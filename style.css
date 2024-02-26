@@ -213,7 +213,7 @@ box-shadow:  20px 20px 60px #d9d9d9,
  .button-container {
   display: flex;
   background-color: rgba(245, 73, 144);
-  width: 70%;
+  width: 285px;
   height: 40px;
   align-items: center;
   justify-content: space-around;
@@ -222,7 +222,7 @@ box-shadow:  20px 20px 60px #d9d9d9,
         rgba(245, 73, 144, 0.5) 5px 10px 15px;
 }
 
-.button {
+.button-container .button {
   outline: 0 !important;
   border: 0 !important;
   width: 40px;
@@ -235,6 +235,10 @@ box-shadow:  20px 20px 60px #d9d9d9,
   color: #fff;
   transition: all ease-in-out 0.3s;
   cursor: pointer;
+}
+.button-container .button a{
+  text-decoration: none;
+  color: white;
 }
 
 .button:hover {
@@ -275,6 +279,7 @@ box-shadow:  20px 20px 60px #d9d9d9,
   position: relative;
   width: 100%;
   height: 500px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -329,33 +334,97 @@ box-shadow:  20px 20px 60px #d9d9d9,
   color: var(--submain-color);
 }
 
-.card__btn {
-  margin-top: 25px;
-  width: 76px;
-  height: 31px;
-  border: 2px solid var(--main-color);
-  border-radius: 4px;
-  font-weight: 700;
-  font-size: 11px;
-  color: var(--main-color);
-  background: var(--bg-color);
-  text-transform: uppercase;
-  transition: all 0.3s;
+.card__wrapper{
+  width: auto;
+  height: auto;
+  margin-top: 130px;
 }
 
-.card__btn-solid {
-  background: var(--main-color);
-  color: var(--bg-color);
+/* -----------Social Icons------------ */
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 15px #00000027;
+  padding: 10px 10px;
+  border-radius: 5em;
+  /* margin-top: ; */
 }
 
-.card__btn:hover {
-  background: var(--main-color);
-  color: var(--bg-color);
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px #00000027;
+  transition: 0.3s;
 }
 
-.card__btn-solid:hover {
-  background: var(--bg-color);
-  color: var(--main-color);
+.social-button:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 6px 3px #00000027;
 }
+
+.social-buttons svg {
+  transition: 0.3s;
+  height: 20px;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.facebook svg {
+  fill: #f2f2f2;
+}
+
+.facebook:hover svg {
+  fill: #3b5998;
+}
+
+.github {
+  background-color: #333;
+}
+
+.github svg {
+  width: 25px;
+  height: 25px;
+  fill: #f2f2f2;
+}
+
+.github:hover svg {
+  fill: #333;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.linkedin svg {
+  fill: #f2f2f2;
+}
+
+.linkedin:hover svg {
+  fill: #0077b5;
+}
+
+.instagram {
+  background-color: #c13584;
+}
+
+.instagram svg {
+  fill: #f2f2f2;
+}
+
+.instagram:hover svg {
+  fill: #c13584;
+}
+
 
 
