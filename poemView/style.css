@@ -12,19 +12,27 @@ body{
 body::-webkit-scrollbar{
   display: none;
 }
-
-.container {
+nav{
   width: 100%;
-  margin: 0 auto;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  bottom: 7.5px;
+  position: absolute;
+  position: fixed;
+}
+  
+.container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
     padding-top: 30px;
     margin-bottom: 50px;
-  }
+}
 /* .container .head{
-  font-weight: 600;
+    font-weight: 600;
     font-size: xx-large;
     margin-bottom: 10px;
-  } */
+} */
 
 .input {
   color: #8707ff;
@@ -35,15 +43,15 @@ body::-webkit-scrollbar{
   outline: none;
   /* max-width: 190px; */
   width: fit-content;
-}
-
-.input:active {
+ }
+ 
+ .input:active {
   box-shadow: 2px 2px 15px #8707ff inset;
-}
+ }
  
 
 button {
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: white;
     background-color: #171717;
@@ -95,14 +103,14 @@ button {
     transform: translate(-50%, -50%) scale(4);
     transition: 1.5s ease;
   }
-  
-  
-  body {
+    
+
+body {
     margin: 0;
     font-family: Arial, sans-serif;
   }
   
-  .poemOfTheDay{
+ .poemOfTheDay{
     width: 100%;
     height: 35%;
     margin-top: 3px;
@@ -111,7 +119,7 @@ button {
  }
 
  .searchby{
-   width: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,34 +132,34 @@ button {
   justify-content: center;
 }
 
-#SB {
+ #SB {
   height: 30px;
   outline: none;
   border: none;
   font-weight: 600;
   font-size: 24px;
-}
+ }
 
-.headingPOTD{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.headingPOTD::-webkit-scrollbar{
-  display: none;
-}
+ .headingPOTD{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .headingPOTD::-webkit-scrollbar{
+    display: none;
+ }
 
-#POTD{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: smaller;
-  margin-top: 4px;
-  /* border: 2px solid black; */
-}
+ #POTD{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: smaller;
+    margin-top: 4px;
+    /* border: 2px solid black; */
+ }
 
  #poemDisplay{
     display: none;
@@ -182,7 +190,7 @@ box-shadow:  20px 20px 60px #d9d9d9,
   padding-bottom: 10px;
   margin-bottom: 60px;
   border: 2px solid rgba(128, 128, 128, 0.463);
-  
+
 }
 
 #displayPoemName p{
@@ -196,25 +204,16 @@ box-shadow:  20px 20px 60px #d9d9d9,
     }
  }
 
- 
- 
+
+
  /* ---------------------------------------------------- */
  /* -------------------------------Navbar */
- 
- 
- nav{
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   bottom: 7.5px;
-   position: absolute;
-   position: fixed;
- }
- 
+
+
  .button-container {
-   display: flex;
+  display: flex;
   background-color: rgba(245, 73, 144);
-  width: 250px;
+  width: 285px;
   height: 40px;
   align-items: center;
   justify-content: space-around;
@@ -223,7 +222,7 @@ box-shadow:  20px 20px 60px #d9d9d9,
         rgba(245, 73, 144, 0.5) 5px 10px 15px;
 }
 
-.button {
+.button-container .button {
   outline: 0 !important;
   border: 0 !important;
   width: 40px;
@@ -236,6 +235,10 @@ box-shadow:  20px 20px 60px #d9d9d9,
   color: #fff;
   transition: all ease-in-out 0.3s;
   cursor: pointer;
+}
+.button-container .button a{
+  text-decoration: none;
+  color: white;
 }
 
 .button:hover {
@@ -264,7 +267,7 @@ box-shadow:  20px 20px 60px #d9d9d9,
 }
 
 #accountDetails.visible {
-  transform: translateY(2%);
+  transform: translateY(-600px);
 }
 
 
@@ -273,9 +276,14 @@ box-shadow:  20px 20px 60px #d9d9d9,
   --submain-color: #78858F;
   --bg-color: #fff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+transform: translateX(-50%);
   width: 100%;
+  max-width: 380px;
   height: 500px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -330,33 +338,97 @@ box-shadow:  20px 20px 60px #d9d9d9,
   color: var(--submain-color);
 }
 
-.card__btn {
-  margin-top: 25px;
-  width: 76px;
-  height: 31px;
-  border: 2px solid var(--main-color);
-  border-radius: 4px;
-  font-weight: 700;
-  font-size: 11px;
-  color: var(--main-color);
-  background: var(--bg-color);
-  text-transform: uppercase;
-  transition: all 0.3s;
+.card__wrapper{
+  width: auto;
+  height: auto;
+  margin-top: 130px;
 }
 
-.card__btn-solid {
-  background: var(--main-color);
-  color: var(--bg-color);
+/* -----------Social Icons------------ */
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 15px #00000027;
+  padding: 10px 10px;
+  border-radius: 5em;
+  /* margin-top: ; */
 }
 
-.card__btn:hover {
-  background: var(--main-color);
-  color: var(--bg-color);
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px #00000027;
+  transition: 0.3s;
 }
 
-.card__btn-solid:hover {
-  background: var(--bg-color);
-  color: var(--main-color);
+.social-button:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 6px 3px #00000027;
 }
+
+.social-buttons svg {
+  transition: 0.3s;
+  height: 20px;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.facebook svg {
+  fill: #f2f2f2;
+}
+
+.facebook:hover svg {
+  fill: #3b5998;
+}
+
+.github {
+  background-color: #333;
+}
+
+.github svg {
+  width: 25px;
+  height: 25px;
+  fill: #f2f2f2;
+}
+
+.github:hover svg {
+  fill: #333;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.linkedin svg {
+  fill: #f2f2f2;
+}
+
+.linkedin:hover svg {
+  fill: #0077b5;
+}
+
+.instagram {
+  background-color: #c13584;
+}
+
+.instagram svg {
+  fill: #f2f2f2;
+}
+
+.instagram:hover svg {
+  fill: #c13584;
+}
+
 
 
