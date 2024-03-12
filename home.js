@@ -30,39 +30,33 @@ auth.onAuthStateChanged((user) => {
         // User is signed in
         console.log('User is signed in');
         console.log(window.location);
-        // Redirect to the home page only if not already on the home page
-        if (window.location.pathname !== '/home.html') {
-            window.location.href = '/home.html';
-            document.getElementById('logoutBtn').style.display = 'block';
-
-        }
     } else {
         // No user is signed in
         console.log('No user is signed in');
         console.log(window.location.pathname);
         // Redirect to the login or sign-up page only if not already on the login or sign-up page
         if (window.location.pathname !== '/Auth/login.html' && window.location.pathname !== '/Auth/Register.html') {
-            window.location.href = '/Auth/Login.html'; 
-            // or '/Auth/signup.html'
-            document.getElementById('logoutBtn').style.display = 'none';
-
+            window.location.href = '/Auth/login.html';
         }
     }
 });
-
+document.getElementById("Rishabhpapa").addEventListener('click', ()=>{
+    console.log("Rishabh")
+})
 // Logout button click event listener
-document.getElementById('logoutBtn').addEventListener('click', () => {
-    // Sign out the user
-    auth.signOut().then(() => {
-        // Sign-out successful
-        console.log('User signed out');
-        // Redirect to login page or perform other actions if needed
-        window.location.href = '/Auth/login.html';
-    }).catch((error) => {
-        // An error happened
-        console.error('Sign-out error:', error);
-    });
-});
+// document.getElementById('Rishabhpapa').addEventListener('click', () => {
+//     console.log("hello papa")
+//     // Sign out the user
+//     auth.signOut().then(() => {
+//         // Sign-out successful
+//         console.log('User signed out');
+//         // Redirect to login page or perform other actions if needed
+//         window.location.href = '/Auth/login.html';
+//     }).catch((error) => {
+//         // An error happened
+//         console.error('Sign-out error:', error);
+//     });
+// });
 
 
 // Getting user data using it's UID------------------------------
@@ -121,3 +115,6 @@ function navBtn(){
 }
    
 navBtn();
+
+
+// menu-container size adjustment on click-----------------

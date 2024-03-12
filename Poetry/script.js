@@ -139,15 +139,17 @@ function displayPoemName(firstTenItems) {
 }
 
 
-// document.getElementById()
-// function displayPoemByList(){
-
-// }
-const accountOption = document.getElementById('accountBtn');
+// Adding Class for some Animations-----------------
+const admin = document.getElementById('admin');
 const accountDetails = document.getElementById('accountDetails');
+const menuInput = document.getElementById('accountBtn');
 
-accountOption.addEventListener('click', () => {
-  accountDetails.classList.toggle('visible');
-  // accountDetails
-  console.log("Hello papa")
+admin.addEventListener('click', () => {
+    accountDetails.classList.toggle('visible');
+    // accountDetails
+    console.log("Hello papa")
+});
+
+menuInput.addEventListener('click', () => {
+    document.getElementById('menu-input').classList.toggle('visible');
 });

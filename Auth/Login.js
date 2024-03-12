@@ -39,7 +39,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
                     localStorage.setItem('email',email);
 
                     // Redirect user to dashboard or another page
-                    window.location.href = "../home.html";
+                    window.location.href = "../index.html";
                 })
                 .catch((error) => {
                     // Handle login error
